@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider-Man: Um Novo Dia | Marvel</title>
+  <meta name="description"
+    content="Página oficial de Spider-Man: Um Novo Dia. É um NOVO DIA para Peter Parker. Compre seus ingressos e assista ao trailer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <img src="assets/fundo-hero.webp" alt="" class="bg-fundo">
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <svg class="svgShape" width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- ========================================================================= -->
+        <!-- MUDANÇA DE SHAPE: ALTERE O ATRIBUTO "d" DO <path> NOS IDs ABAIXO          -->
+        <!-- ========================================================================= -->
+
+        <!-- SHAPE PARA DESKTOP -->
+        <clipPath id="custom-clip-desktop" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.736 0.063395C0.736 0.098407 0.75153 0.126789 0.770695 0.126789H0.95C0.977565 0.126789 1 0.167772 1 0.218325V0.908465C1 0.959018 0.977565 1 0.95 1H0.177802C0.157269 1 0.140625 0.969594 0.140625 0.932087C0.140625 0.894579 0.123981 0.864173 0.103448 0.864173H0.050108C0.022434 0.864173 0 0.823191 0 0.772638V0.218325C0 0.167772 0.022434 0.126789 0.050108 0.126789H0.122624C0.14179 0.126789 0.157328 0.098407 0.157328 0.063395C0.157328 0.028383 0.172865 0 0.192031 0H0.701288C0.720453 0 0.736 0.028383 0.736 0.063395Z" />
+        </clipPath>
+
+        <!-- SHAPE PARA TABLET (Até 1024px) -->
+        <clipPath id="custom-clip-tablet" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.545876 0.067824C0.545876 0.105282 0.574469 0.135648 0.609739 0.135648H0.913809C0.961409 0.135648 1 0.17663 1 0.227183V0.908465C1 0.959018 0.961409 1 0.913809 1H0.309546C0.272181 1 0.241891 0.967832 0.241891 0.92815C0.241891 0.888468 0.211601 0.8563 0.174235 0.8563H0.086191C0.038589 0.8563 0 0.815317 0 0.764764V0.227183C0 0.17663 0.038589 0.135648 0.086191 0.135648H0.241975C0.277246 0.135648 0.305839 0.105282 0.305839 0.067824C0.305839 0.030366 0.334432 0 0.369702 0H0.482012C0.517283 0 0.545876 0.030366 0.545876 0.067824Z" />
+        </clipPath>
+
+        <!-- SHAPE PARA MOBILE (Até 768px) -->
+        <clipPath id="custom-clip-mobile" clipPathUnits="objectBoundingBox">
+<path d="M0.382267 0.0338673C0.382267 0.0525717 0.40466 0.0677346 0.432281 0.0677346H0.864826C0.93948 0.0677346 1 0.108717 1 0.15927V0.908465C1 0.959018 0.93948 1 0.864826 1H0.454215C0.412874 1 0.37936 0.977306 0.37936 0.949311C0.37936 0.921316 0.345847 0.898622 0.304506 0.898622H0.135174C0.06052 0.898622 0 0.85764 0 0.807087V0.156317C0 0.107395 0.0585674 0.0677346 0.130814 0.0677346H0.211615C0.239235 0.0677346 0.261628 0.0525717 0.261628 0.0338673C0.261628 0.0151629 0.28402 0 0.311641 0H0.332254C0.359875 0 0.382267 0.0151629 0.382267 0.0338673Z" />
+      </svg>
+
+      <div class="hero-container">
+        <!-- Header -->
+        <header class="header">
+          <div class="header-logos">
+            <img src="assets/logo-spider.svg" alt="Spider-Man Logo" class="logo-spider">
+            <img src="assets/logo-marvel.svg" alt="Marvel Logo" class="logo-marvel">
+          </div>
+          <nav class="header-nav">
+            <a href="#trailer" class="nav-link">TRAILER</a>
+            <a href="#ingressos" class="btn-tickets">COMPRAR INGRESSOS</a>
+          </nav>
+        </header>
+
+        <!-- Main Content Banner -->
+        <main class="main-content">
+          <div class="banner-card">
+            <canvas id="hero-canvas"></canvas>
+
+            <div class="banner-logo">
+              <img src="assets/logo-spider-man.svg" alt="Spider-Man Um Novo Dia Logo" class="logo-spiderman">
+              <p class="description">
+                É um <strong>NOVO DIA</strong> para Peter Parker. Agora, ele combate o crime em tempo integral como
+                HomemAranha em um mundo que não se lembra dele.
+              </p>
+            </div>
+          </div>
+        </main>
+
+        <!-- Expanding Video Mask Container (Superior Z-Index outside clipPath) -->
+        <div class="trailer-mask-wrapper">
+          <div class="trailer-mask">
+            <video id="hero-trailer-video" src="assets/trailer.mp4" muted loop playsinline autoplay preload="auto"></video>
+            <div class="trailer-overlay"></div>
+
+            <!-- Center Play Button -->
+            <button class="btn-play-trailer" id="btn-play-trailer" aria-label="Reproduzir Trailer">
+              <svg width="28" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
+              </svg>
+            </button>
+
+            <!-- Custom Video Controls -->
+            <div class="custom-video-controls" id="custom-video-controls">
+              <button class="ctrl-btn" id="ctrl-play-pause" aria-label="Play / Pause">
+                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="progress-bar-wrapper" id="progress-bar-wrapper">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+              </div>
+              <button class="ctrl-btn" id="ctrl-mute" aria-label="Som">
+                <svg class="icon-unmute" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                <svg class="icon-mute" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Info -->
+        <footer class="footer">
+          <div class="release-info">
+            <span class="release-label">LANÇAMENTO</span>
+            <h2 class="release-date">30/07</h2>
+          </div>
+          <div class="badge-container">
+            <img src="assets/texto-circular.svg" alt="Role a página" class="circular-text">
+            <img src="assets/mao.svg" alt="Mão do Homem-Aranha" class="hand-icon">
+          </div>
+        </footer>
+      </div>
+
+      <!-- Character Section (Elenco) -->
+      <section class="character-section" id="personagens">
+        <div class="character-container">
+          <div class="character-info">
+            <div class="character-header">
+              <h2 class="actress-name" id="cast-actor-name">Tom Holland</h2>
+              <p class="character-name" id="cast-role-name">PETER PARKER / HOMEM-ARANHA</p>
+            </div>
+
+            <div class="character-scroll-list">
+              <div class="scroll-track" id="scroll-track-container">
+                <img src="assets/logo-spider.svg" alt="Aranha Icone" class="spider-track-icon" id="spider-track-icon">
+                <div class="track-line">
+                  <div class="track-line-progress" id="track-line-progress"></div>
+                </div>
+              </div>
+              <div class="scroll-items" id="cast-scroll-items">
+                <span class="scroll-item active" data-index="0">PETER PARKER / HOMEM-ARANHA</span>
+                <span class="scroll-item" data-index="1">MICHELLE "MJ" JONES</span>
+                <span class="scroll-item" data-index="2">NED LEEDS</span>
+                <span class="scroll-item" data-index="3">ESCORPIÃO</span>
+                <span class="scroll-item" data-index="4">BRUCE BANNER / HULK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="character-media">
+            <div class="image-wrapper">
+              <img src="assets/elenco/img1.webp" alt="Elenco Homem-Aranha" class="mj-image" id="cast-main-image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- GSAP & Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
